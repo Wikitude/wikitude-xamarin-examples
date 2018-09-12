@@ -1,0 +1,95 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:text="@string/poi_id"
+        android:id="@+id/poi_detail_id_title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+        android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:textColor="@color/wikitude_primary_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/poi_detail_id_field_text_view"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+        android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:textColor="@color/wikitude_secondary_text"
+        app:layout_constraintTop_toTopOf="@+id/poi_detail_id_title_text_view"
+        app:layout_constraintBottom_toBottomOf="@+id/poi_detail_id_title_text_view"
+        app:layout_constraintStart_toStartOf="@+id/poi_detail_name_field_text_view"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <TextView
+        android:text="@string/poi_name"
+        android:id="@+id/poi_detail_name_title_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+        android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        app:layout_constraintTop_toBottomOf="@+id/poi_detail_id_title_text_view"
+        app:layout_constraintStart_toStartOf="@+id/poi_detail_id_title_text_view" />
+
+    <TextView
+        android:id="@+id/poi_detail_name_field_text_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+        android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:textColor="@color/wikitude_secondary_text"
+        app:layout_constraintTop_toTopOf="@+id/poi_detail_name_title_text_view"
+        app:layout_constraintBottom_toBottomOf="@+id/poi_detail_name_title_text_view"
+        app:layout_constraintStart_toStartOf="@+id/poi_detail_description_field_text_view"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <TextView
+        android:text="@string/poi_description"
+        android:id="@+id/poi_detail_description_title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+        android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        app:layout_constraintTop_toBottomOf="@+id/poi_detail_name_title_text_view"
+        app:layout_constraintStart_toStartOf="@+id/poi_detail_name_title_text_view" />
+
+    <TextView
+        android:id="@+id/poi_detail_description_field_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+        android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:textColor="@color/wikitude_secondary_text"
+        app:layout_constraintTop_toTopOf="@+id/poi_detail_description_title_text_view"
+        app:layout_constraintBottom_toBottomOf="@+id/poi_detail_description_title_text_view"
+        app:layout_constraintStart_toEndOf="@+id/poi_detail_description_title_text_view"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{532DB3FA-3C27-410E-8EB5-F797A5DCC050}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>XamarinExampleApp.iOS</RootNamespace>
+    <AssemblyName>XamarinExampleApp.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>34969</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <BuildIpa>true</BuildIpa>
+    <CodesignProvision>SDK_Example_Apps_Distribution</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IOSDebuggerPort>62475</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Json" />
+    <Reference Include="Xamarin.Wikitude.SDK.JS.iOS">
+      <HintPath>..\packages\Xamarin.Wikitude.SDK.JS.8.1.0\lib\xamarinios10\Xamarin.Wikitude.SDK.JS.iOS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-83.5x83.5%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ItunesArtwork%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="CoreServices\" />
+    <Folder Include="AdvancedViewControllers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="ArExperienceViewController.xib" />
+    <InterfaceDefinition Include="AdvancedViewControllers\ObtainPoiDataFromApplicationModelViewController.xib" />
+    <InterfaceDefinition Include="AdvancedViewControllers\CaptureScreenshotViewController.xib" />
+    <InterfaceDefinition Include="AdvancedViewControllers\SaveAndLoadInstantTargetViewController.xib" />
+    <InterfaceDefinition Include="AdvancedViewControllers\NativeDetailsViewController.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ExperienceSelectionViewController.cs" />
+    <Compile Include="ExperienceSelectionViewController.designer.cs">
+      <DependentUpon>ExperienceSelectionViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArExperienceViewController.cs" />
+    <Compile Include="ArExperienceViewController.designer.cs">
+      <DependentUpon>ArExperienceViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SDKInformationViewController.cs" />
+    <Compile Include="SDKInformationViewController.designer.cs">
+      <DependentUpon>SDKInformationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoreServices\iOSArExperienceConverter.cs" />
+    <Compile Include="AdvancedViewControllers\ObtainPoiDataFromApplicationModelViewController.cs" />
+    <Compile Include="AdvancedViewControllers\ObtainPoiDataFromApplicationModelViewController.designer.cs">
+      <DependentUpon>ObtainPoiDataFromApplicationModelViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdvancedViewControllers\CaptureScreenshotViewController.cs" />
+    <Compile Include="AdvancedViewControllers\CaptureScreenshotViewController.designer.cs">
+      <DependentUpon>CaptureScreenshotViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdvancedViewControllers\SaveAndLoadInstantTargetViewController.cs" />
+    <Compile Include="AdvancedViewControllers\SaveAndLoadInstantTargetViewController.designer.cs">
+      <DependentUpon>SaveAndLoadInstantTargetViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdvancedViewControllers\PoiDetailViewController.cs" />
+    <Compile Include="AdvancedViewControllers\PoiDetailViewController.designer.cs">
+      <DependentUpon>PoiDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdvancedViewControllers\NativeDetailsViewController.cs" />
+    <Compile Include="AdvancedViewControllers\NativeDetailsViewController.designer.cs">
+      <DependentUpon>NativeDetailsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageURLsViewController.cs" />
+    <Compile Include="ManageURLsViewController.designer.cs">
+      <DependentUpon>ManageURLsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddURLViewController.cs" />
+    <Compile Include="AddURLViewController.designer.cs">
+      <DependentUpon>AddURLViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoreServices\ArExperienceAuthorizationController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ARchitectExamples\ade.js" />
+    <BundleResource Include="Resources\ARchitectExamples\samples.json" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_1_ImageOnTarget\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_1_ImageOnTarget\assets\imageOne.png" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_1_ImageOnTarget\assets\magazine.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_1_ImageOnTarget\assets\surfer.png" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_1_ImageOnTarget\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_1_ImageOnTarget\js\imageontarget.js" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_2_DifferentTargets\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_2_DifferentTargets\assets\bike.png" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_2_DifferentTargets\assets\imageOne.png" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_2_DifferentTargets\assets\imageTwo.png" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_2_DifferentTargets\assets\magazine.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_2_DifferentTargets\assets\surfer.png" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_2_DifferentTargets\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_2_DifferentTargets\js\multipletargets.js" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_3_Interactivity\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_3_Interactivity\assets\bike.png" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_3_Interactivity\assets\imageOne.png" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_3_Interactivity\assets\imageTwo.png" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_3_Interactivity\assets\magazine.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_3_Interactivity\assets\surfer.png" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_3_Interactivity\assets\wwwButton.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_3_Interactivity\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_3_Interactivity\js\interactivity.js" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_4_HtmlDrawable\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_4_HtmlDrawable\assets\imageOne.png" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_4_HtmlDrawable\assets\magazine.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_4_HtmlDrawable\assets\surfer.png" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_4_HtmlDrawable\assets\weather.html" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_4_HtmlDrawable\assets\wwwButton.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_4_HtmlDrawable\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_4_HtmlDrawable\js\htmldrawable.js" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_5_Bonus-Sparkles\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_5_Bonus-Sparkles\assets\imageOne.png" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_5_Bonus-Sparkles\assets\imageSparkles.png" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_5_Bonus-Sparkles\assets\magazine.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_5_Bonus-Sparkles\assets\surfer.png" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_5_Bonus-Sparkles\assets\weather.html" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_5_Bonus-Sparkles\assets\wwwButton.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_5_Bonus-Sparkles\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\01_ImageTracking_5_Bonus-Sparkles\js\sparkles.js" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\assets\beard_01.png" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\assets\beard_02.png" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\assets\beard_03.png" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\assets\christmas_hat.png" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\assets\delete.png" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\assets\face.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\assets\glasses.png" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\assets\mirror_sunglasses.png" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\assets\police_hat.png" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\assets\snapshot.png" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\assets\target.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_1_Gestures\js\gestures.js" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_2_DistanceToTarget\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_2_DistanceToTarget\assets\imageOne.png" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_2_DistanceToTarget\assets\magazine.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_2_DistanceToTarget\assets\surfer.png" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_2_DistanceToTarget\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_2_DistanceToTarget\js\distancetotarget.js" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_3_ExtendedTracking\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_3_ExtendedTracking\assets\iot_tracker.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_3_ExtendedTracking\assets\pipes.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_3_ExtendedTracking\assets\target_iot.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_3_ExtendedTracking\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_3_ExtendedTracking\js\extendedtracking.js" />
+    <BundleResource Include="Resources\ARchitectExamples\02_AdvancedImageTracking_3_ExtendedTracking\js\meta.js" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_1_MultipleTargets\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_1_MultipleTargets\assets\dinosaurs.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_1_MultipleTargets\assets\diplodocus.png" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_1_MultipleTargets\assets\spinosaurus.png" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_1_MultipleTargets\assets\triceratops.png" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_1_MultipleTargets\assets\tyrannosaurus.png" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_1_MultipleTargets\assets\models\diplodocus.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_1_MultipleTargets\assets\models\spinosaurus.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_1_MultipleTargets\assets\models\triceratops.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_1_MultipleTargets\assets\models\tyrannosaurus.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_1_MultipleTargets\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_1_MultipleTargets\js\multiplesimultaneoustargets.js" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_2_DistanceBetweenTargets\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_2_DistanceBetweenTargets\assets\dinosaurs.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_2_DistanceBetweenTargets\assets\diplodocus.png" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_2_DistanceBetweenTargets\assets\spinosaurus.png" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_2_DistanceBetweenTargets\assets\triceratops.png" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_2_DistanceBetweenTargets\assets\tyrannosaurus.png" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_2_DistanceBetweenTargets\assets\models\diplodocus.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_2_DistanceBetweenTargets\assets\models\spinosaurus.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_2_DistanceBetweenTargets\assets\models\triceratops.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_2_DistanceBetweenTargets\assets\models\tyrannosaurus.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_2_DistanceBetweenTargets\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_2_DistanceBetweenTargets\js\multiplesimultaneoustargets.js" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_3_TransformationBetweenTargets\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_3_TransformationBetweenTargets\assets\dinosaurs.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_3_TransformationBetweenTargets\assets\diplodocus.png" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_3_TransformationBetweenTargets\assets\spinosaurus.png" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_3_TransformationBetweenTargets\assets\triceratops.png" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_3_TransformationBetweenTargets\assets\tyrannosaurus.png" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_3_TransformationBetweenTargets\assets\models\diplodocus.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_3_TransformationBetweenTargets\assets\models\spinosaurus.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_3_TransformationBetweenTargets\assets\models\triceratops.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_3_TransformationBetweenTargets\assets\models\tyrannosaurus.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_3_TransformationBetweenTargets\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\03_MultipleTargets_3_TransformationBetweenTargets\js\multiplesimultaneoustargets.js" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\assets\austria.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\assets\banner.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\assets\brazil.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\assets\france.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\assets\germany.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\assets\italy.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\js\singleimagerecognition.js" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\assets\austria.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\assets\banner.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\assets\brazil.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\assets\france.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\assets\germany.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\assets\italy.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\js\continuousimagerecognition.js" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\assets\austria.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\assets\bannerWithNameField.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\assets\brazil.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\assets\france.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\assets\germany.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\assets\italy.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\assets\orderNowButton.png" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\js\usingmetainformationintheresponse.js" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_1_SimpleInstantTracking\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_1_SimpleInstantTracking\assets\crosshairs_blue.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_1_SimpleInstantTracking\assets\crosshairs_green.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_1_SimpleInstantTracking\assets\crosshairs_red.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_1_SimpleInstantTracking\assets\buttons\start.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_1_SimpleInstantTracking\assets\buttons\stop.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_1_SimpleInstantTracking\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_1_SimpleInstantTracking\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_1_SimpleInstantTracking\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_1_SimpleInstantTracking\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_1_SimpleInstantTracking\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_1_SimpleInstantTracking\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_1_SimpleInstantTracking\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_1_SimpleInstantTracking\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_1_SimpleInstantTracking\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_1_SimpleInstantTracking\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_1_SimpleInstantTracking\js\simpleinstanttracking.js" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_2_3dModelOnPlane\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_2_3dModelOnPlane\assets\crosshairs_blue.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_2_3dModelOnPlane\assets\crosshairs_green.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_2_3dModelOnPlane\assets\crosshairs_red.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_2_3dModelOnPlane\assets\buttons\start.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_2_3dModelOnPlane\assets\buttons\stop.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_2_3dModelOnPlane\assets\buttons\trash.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_2_3dModelOnPlane\assets\models\couch.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_2_3dModelOnPlane\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_2_3dModelOnPlane\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_2_3dModelOnPlane\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_2_3dModelOnPlane\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_2_3dModelOnPlane\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_2_3dModelOnPlane\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_2_3dModelOnPlane\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_2_3dModelOnPlane\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_2_3dModelOnPlane\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_2_3dModelOnPlane\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_2_3dModelOnPlane\js\3dmodelsinstanttracking.js" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\assets\crosshairs_blue.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\assets\crosshairs_green.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\assets\crosshairs_red.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\assets\buttons\clock.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\assets\buttons\couch.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\assets\buttons\office_chair.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\assets\buttons\start.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\assets\buttons\stop.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\assets\buttons\table.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\assets\buttons\trainer.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\assets\buttons\trash.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\assets\models\clock.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\assets\models\couch.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\assets\models\officechair.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\assets\models\table.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\assets\models\trainer.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_3_Interactivity\js\3dmodelsandgesturesinstanttracking.js" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\assets\crosshairs_blue.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\assets\crosshairs_green.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\assets\crosshairs_red.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\assets\buttons\clock.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\assets\buttons\couch.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\assets\buttons\office_chair.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\assets\buttons\start.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\assets\buttons\stop.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\assets\buttons\table.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\assets\buttons\trainer.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\assets\buttons\trash.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\assets\models\clock.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\assets\models\couch.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\assets\models\officechair.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\assets\models\table.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\assets\models\trainer.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_4_SceneInteraction\js\sceneinteraction.js" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\assets\crosshairs_blue.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\assets\crosshairs_green.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\assets\crosshairs_red.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\assets\buttons\clock.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\assets\buttons\couch.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\assets\buttons\office_chair.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\assets\buttons\save.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\assets\buttons\start.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\assets\buttons\stop.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\assets\buttons\table.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\assets\buttons\trainer.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\assets\buttons\trash.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\assets\models\clock.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\assets\models\couch.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\assets\models\officechair.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\assets\models\table.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\assets\models\trainer.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_5_SaveInstantTarget\js\saveinstanttarget.js" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_6_LoadInstantTarget\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_6_LoadInstantTarget\assets\crosshairs_blue.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_6_LoadInstantTarget\assets\buttons\load.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_6_LoadInstantTarget\assets\models\clock.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_6_LoadInstantTarget\assets\models\couch.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_6_LoadInstantTarget\assets\models\officechair.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_6_LoadInstantTarget\assets\models\table.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_6_LoadInstantTarget\assets\models\trainer.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_6_LoadInstantTarget\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_6_LoadInstantTarget\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_6_LoadInstantTarget\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_6_LoadInstantTarget\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_6_LoadInstantTarget\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_6_LoadInstantTarget\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_6_LoadInstantTarget\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_6_LoadInstantTarget\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_6_LoadInstantTarget\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_6_LoadInstantTarget\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_6_LoadInstantTarget\js\loadinstanttarget.js" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_1_BasicObjectTracking\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_1_BasicObjectTracking\assets\firetruck.wto" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_1_BasicObjectTracking\assets\firetruck_image.png" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_1_BasicObjectTracking\assets\firetruck_occluder.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_1_BasicObjectTracking\assets\traffic_cone.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_1_BasicObjectTracking\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_1_BasicObjectTracking\js\simpleobjecttracking.js" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_2_2dImageAndSoundAugmentations\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_2_2dImageAndSoundAugmentations\assets\emergency_light.png" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_2_2dImageAndSoundAugmentations\assets\firetruck.wto" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_2_2dImageAndSoundAugmentations\assets\firetruck_image.png" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_2_2dImageAndSoundAugmentations\assets\firetruck_occluder.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_2_2dImageAndSoundAugmentations\assets\marker.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_2_2dImageAndSoundAugmentations\assets\siren.wav" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_2_2dImageAndSoundAugmentations\assets\traffic_cone.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_2_2dImageAndSoundAugmentations\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_2_2dImageAndSoundAugmentations\js\lightanimation.js" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_3_Animated3dAugmentations\index.html" />    
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_3_Animated3dAugmentations\assets\arrow.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_3_Animated3dAugmentations\assets\emergency_light.png" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_3_Animated3dAugmentations\assets\firetruck.wto" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_3_Animated3dAugmentations\assets\firetruck_image.png" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_3_Animated3dAugmentations\assets\firetruck_occluder.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_3_Animated3dAugmentations\assets\marker.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_3_Animated3dAugmentations\assets\screw.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_3_Animated3dAugmentations\assets\screwdriver.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_3_Animated3dAugmentations\assets\siren.wav" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_3_Animated3dAugmentations\assets\traffic_cone.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_3_Animated3dAugmentations\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_3_Animated3dAugmentations\js\assembleanimation.js" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_4_ExtendedObjectTracking\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_4_ExtendedObjectTracking\assets\arrow.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_4_ExtendedObjectTracking\assets\emergency_light.png" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_4_ExtendedObjectTracking\assets\firetruck.wto" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_4_ExtendedObjectTracking\assets\firetruck_image.png" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_4_ExtendedObjectTracking\assets\firetruck_occluder.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_4_ExtendedObjectTracking\assets\marker.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_4_ExtendedObjectTracking\assets\screw.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_4_ExtendedObjectTracking\assets\screwdriver.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_4_ExtendedObjectTracking\assets\siren.wav" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_4_ExtendedObjectTracking\assets\traffic_cone.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_4_ExtendedObjectTracking\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\06_ObjectTracking_4_ExtendedObjectTracking\js\extendedobjecttracking.js" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_1_3dModelOnTarget\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_1_3dModelOnTarget\assets\car.png" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_1_3dModelOnTarget\assets\car.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_1_3dModelOnTarget\assets\tracker.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_1_3dModelOnTarget\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_1_3dModelOnTarget\js\3dmodelontarget.js" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_2_AppearingAnimation\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_2_AppearingAnimation\assets\car.png" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_2_AppearingAnimation\assets\car.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_2_AppearingAnimation\assets\tracker.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_2_AppearingAnimation\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_2_AppearingAnimation\js\appearinganimation.js" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_3_Interactivity\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_3_Interactivity\assets\car.png" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_3_Interactivity\assets\car.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_3_Interactivity\assets\rotateButton.png" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_3_Interactivity\assets\tracker.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_3_Interactivity\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_3_Interactivity\js\interactivity.js" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_4_SnapToScreen\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_4_SnapToScreen\assets\car.png" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_4_SnapToScreen\assets\car.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_4_SnapToScreen\assets\rotateButton.png" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_4_SnapToScreen\assets\snapButton.png" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_4_SnapToScreen\assets\tracker.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_4_SnapToScreen\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_4_SnapToScreen\js\snaptoscreen.js" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_5_AnimatedModelParts\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_5_AnimatedModelParts\assets\car.png" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_5_AnimatedModelParts\assets\car_animated.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_5_AnimatedModelParts\assets\rotateButton.png" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_5_AnimatedModelParts\assets\tracker.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_5_AnimatedModelParts\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_5_AnimatedModelParts\js\imagerecognitionand3d.js" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_6_3dModelAtGeoLocation\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_6_3dModelAtGeoLocation\assets\earth.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_6_3dModelAtGeoLocation\assets\indi.png" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_6_3dModelAtGeoLocation\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\07_3dModels_6_3dModelAtGeoLocation\js\3dmodelatgeolocation.js" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_1_PoiAtLocation\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_1_PoiAtLocation\assets\marker_idle.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_1_PoiAtLocation\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_1_PoiAtLocation\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_1_PoiAtLocation\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_1_PoiAtLocation\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_1_PoiAtLocation\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_1_PoiAtLocation\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_1_PoiAtLocation\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_1_PoiAtLocation\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_1_PoiAtLocation\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_1_PoiAtLocation\js\poiatlocation.js" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_2_PoiWithLabel\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_2_PoiWithLabel\assets\marker_idle.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_2_PoiWithLabel\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_2_PoiWithLabel\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_2_PoiWithLabel\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_2_PoiWithLabel\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_2_PoiWithLabel\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_2_PoiWithLabel\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_2_PoiWithLabel\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_2_PoiWithLabel\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_2_PoiWithLabel\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_2_PoiWithLabel\js\marker.js" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_2_PoiWithLabel\js\poiwithlabel.js" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_3_MultiplePois\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_3_MultiplePois\assets\marker_idle.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_3_MultiplePois\assets\marker_selected.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_3_MultiplePois\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_3_MultiplePois\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_3_MultiplePois\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_3_MultiplePois\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_3_MultiplePois\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_3_MultiplePois\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_3_MultiplePois\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_3_MultiplePois\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_3_MultiplePois\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_3_MultiplePois\js\marker.js" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_3_MultiplePois\js\multiplepois.js" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_4_SelectingPois\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_4_SelectingPois\assets\indi.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_4_SelectingPois\assets\marker_idle.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_4_SelectingPois\assets\marker_selected.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_4_SelectingPois\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_4_SelectingPois\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_4_SelectingPois\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_4_SelectingPois\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_4_SelectingPois\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_4_SelectingPois\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_4_SelectingPois\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_4_SelectingPois\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_4_SelectingPois\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_4_SelectingPois\js\marker.js" />
+    <BundleResource Include="Resources\ARchitectExamples\08_PointOfInterest_4_SelectingPois\js\selectingpois.js" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_1_FromApplicationModel\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_1_FromApplicationModel\assets\indi.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_1_FromApplicationModel\assets\marker_idle.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_1_FromApplicationModel\assets\marker_selected.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_1_FromApplicationModel\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_1_FromApplicationModel\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_1_FromApplicationModel\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_1_FromApplicationModel\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_1_FromApplicationModel\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_1_FromApplicationModel\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_1_FromApplicationModel\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_1_FromApplicationModel\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_1_FromApplicationModel\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_1_FromApplicationModel\js\fromapplicationmodel.js" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_1_FromApplicationModel\js\marker.js" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_2_FromLocalResource\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_2_FromLocalResource\assets\indi.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_2_FromLocalResource\assets\marker_idle.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_2_FromLocalResource\assets\marker_selected.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_2_FromLocalResource\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_2_FromLocalResource\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_2_FromLocalResource\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_2_FromLocalResource\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_2_FromLocalResource\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_2_FromLocalResource\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_2_FromLocalResource\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_2_FromLocalResource\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_2_FromLocalResource\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_2_FromLocalResource\js\fromlocalresource.js" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_2_FromLocalResource\js\marker.js" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_2_FromLocalResource\js\myjsondata.js" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_3_FromWebservice\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_3_FromWebservice\assets\indi.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_3_FromWebservice\assets\marker_idle.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_3_FromWebservice\assets\marker_selected.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_3_FromWebservice\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_3_FromWebservice\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_3_FromWebservice\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_3_FromWebservice\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_3_FromWebservice\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_3_FromWebservice\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_3_FromWebservice\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_3_FromWebservice\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_3_FromWebservice\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_3_FromWebservice\js\fromwebservice.js" />
+    <BundleResource Include="Resources\ARchitectExamples\09_ObtainPoiData_3_FromWebservice\js\marker.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_1_PresentingDetails\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_1_PresentingDetails\assets\indi.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_1_PresentingDetails\assets\marker_idle.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_1_PresentingDetails\assets\marker_selected.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_1_PresentingDetails\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_1_PresentingDetails\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_1_PresentingDetails\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_1_PresentingDetails\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_1_PresentingDetails\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_1_PresentingDetails\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_1_PresentingDetails\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_1_PresentingDetails\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_1_PresentingDetails\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_1_PresentingDetails\js\marker.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_1_PresentingDetails\js\presentingdetails.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_2_AddingRadar\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_2_AddingRadar\assets\indi.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_2_AddingRadar\assets\marker_idle.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_2_AddingRadar\assets\marker_selected.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_2_AddingRadar\assets\radar_bg.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_2_AddingRadar\assets\radar_north.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_2_AddingRadar\css\poi-radar.css" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_2_AddingRadar\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_2_AddingRadar\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_2_AddingRadar\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_2_AddingRadar\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_2_AddingRadar\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_2_AddingRadar\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_2_AddingRadar\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_2_AddingRadar\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_2_AddingRadar\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_2_AddingRadar\js\addingradar.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_2_AddingRadar\js\marker.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_2_AddingRadar\js\radar.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_3_LimitingRange\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_3_LimitingRange\assets\indi.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_3_LimitingRange\assets\marker_idle.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_3_LimitingRange\assets\marker_selected.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_3_LimitingRange\assets\radar_bg.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_3_LimitingRange\assets\radar_north.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_3_LimitingRange\css\poi-radar.css" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_3_LimitingRange\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_3_LimitingRange\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_3_LimitingRange\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_3_LimitingRange\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_3_LimitingRange\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_3_LimitingRange\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_3_LimitingRange\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_3_LimitingRange\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_3_LimitingRange\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_3_LimitingRange\js\limitingrange.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_3_LimitingRange\js\marker.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_3_LimitingRange\js\radar.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_4_ReloadingContent\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_4_ReloadingContent\assets\indi.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_4_ReloadingContent\assets\marker_idle.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_4_ReloadingContent\assets\marker_selected.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_4_ReloadingContent\assets\radar_bg.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_4_ReloadingContent\assets\radar_north.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_4_ReloadingContent\css\poi-radar.css" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_4_ReloadingContent\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_4_ReloadingContent\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_4_ReloadingContent\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_4_ReloadingContent\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_4_ReloadingContent\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_4_ReloadingContent\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_4_ReloadingContent\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_4_ReloadingContent\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_4_ReloadingContent\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_4_ReloadingContent\js\marker.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_4_ReloadingContent\js\radar.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_4_ReloadingContent\js\reloadingcontent.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_5_NativeDetailScreen\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_5_NativeDetailScreen\assets\indi.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_5_NativeDetailScreen\assets\marker_idle.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_5_NativeDetailScreen\assets\marker_selected.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_5_NativeDetailScreen\assets\radar_bg.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_5_NativeDetailScreen\assets\radar_north.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_5_NativeDetailScreen\css\poi-radar.css" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_5_NativeDetailScreen\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_5_NativeDetailScreen\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_5_NativeDetailScreen\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_5_NativeDetailScreen\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_5_NativeDetailScreen\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_5_NativeDetailScreen\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_5_NativeDetailScreen\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_5_NativeDetailScreen\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_5_NativeDetailScreen\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_5_NativeDetailScreen\js\marker.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_5_NativeDetailScreen\js\nativedetailscreen.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_5_NativeDetailScreen\js\radar.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_6_Bonus-CaptureScreen\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_6_Bonus-CaptureScreen\assets\indi.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_6_Bonus-CaptureScreen\assets\marker_idle.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_6_Bonus-CaptureScreen\assets\marker_selected.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_6_Bonus-CaptureScreen\assets\radar_bg.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_6_Bonus-CaptureScreen\assets\radar_north.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_6_Bonus-CaptureScreen\css\poi-radar.css" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_6_Bonus-CaptureScreen\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_6_Bonus-CaptureScreen\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_6_Bonus-CaptureScreen\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_6_Bonus-CaptureScreen\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_6_Bonus-CaptureScreen\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_6_Bonus-CaptureScreen\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_6_Bonus-CaptureScreen\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_6_Bonus-CaptureScreen\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_6_Bonus-CaptureScreen\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_6_Bonus-CaptureScreen\js\capturescreen.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_6_Bonus-CaptureScreen\js\marker.js" />
+    <BundleResource Include="Resources\ARchitectExamples\10_BrowsingPois_6_Bonus-CaptureScreen\js\radar.js" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_1_SimpleVideo\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_1_SimpleVideo\assets\magazine.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_1_SimpleVideo\assets\surfer.png" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_1_SimpleVideo\assets\video.mp4" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_1_SimpleVideo\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_1_SimpleVideo\js\simplevideo.js" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_2_PlaybackStates\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_2_PlaybackStates\assets\magazine.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_2_PlaybackStates\assets\playButton.png" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_2_PlaybackStates\assets\surfer.png" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_2_PlaybackStates\assets\video.mp4" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_2_PlaybackStates\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_2_PlaybackStates\js\playbackstates.js" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_3_SnappingVideo\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_3_SnappingVideo\assets\magazine.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_3_SnappingVideo\assets\playButton.png" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_3_SnappingVideo\assets\surfer.png" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_3_SnappingVideo\assets\video.mp4" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_3_SnappingVideo\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_3_SnappingVideo\js\snappingvideo.js" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_4_Bonus-TransparentVideo\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_4_Bonus-TransparentVideo\assets\magazine.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_4_Bonus-TransparentVideo\assets\surfer.png" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_4_Bonus-TransparentVideo\assets\transparentVideo.mp4" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_4_Bonus-TransparentVideo\assets\wwwButton.jpg" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_4_Bonus-TransparentVideo\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\11_Video_4_Bonus-TransparentVideo\js\transparentvideo.js" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_1_FrontCamera\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_1_FrontCamera\assets\indi.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_1_FrontCamera\assets\marker_idle.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_1_FrontCamera\assets\marker_selected.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_1_FrontCamera\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_1_FrontCamera\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_1_FrontCamera\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_1_FrontCamera\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_1_FrontCamera\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_1_FrontCamera\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_1_FrontCamera\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_1_FrontCamera\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_1_FrontCamera\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_1_FrontCamera\js\frontCam.js" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_1_FrontCamera\js\marker.js" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_1_FrontCamera\js\myJsonData.js" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_2_CameraSwitching\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_2_CameraSwitching\assets\indi.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_2_CameraSwitching\assets\marker_idle.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_2_CameraSwitching\assets\marker_selected.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_2_CameraSwitching\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_2_CameraSwitching\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_2_CameraSwitching\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_2_CameraSwitching\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_2_CameraSwitching\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_2_CameraSwitching\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_2_CameraSwitching\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_2_CameraSwitching\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_2_CameraSwitching\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_2_CameraSwitching\js\camSwitch.js" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_2_CameraSwitching\js\marker.js" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_2_CameraSwitching\js\myJsonData.js" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_3_AdvancedFeatures\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_3_AdvancedFeatures\assets\indi.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_3_AdvancedFeatures\assets\marker_idle.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_3_AdvancedFeatures\assets\marker_selected.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_3_AdvancedFeatures\jquery\jquery-1.9.1.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_3_AdvancedFeatures\jquery\jquery-mobile-transparent-ui-overlay.css" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_3_AdvancedFeatures\jquery\jquery.mobile-1.3.2.min.css" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_3_AdvancedFeatures\jquery\jquery.mobile-1.3.2.min.js" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_3_AdvancedFeatures\jquery\images\ajax-loader.gif" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_3_AdvancedFeatures\jquery\images\icons-18-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_3_AdvancedFeatures\jquery\images\icons-18-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_3_AdvancedFeatures\jquery\images\icons-36-black.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_3_AdvancedFeatures\jquery\images\icons-36-white.png" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_3_AdvancedFeatures\js\hwFeatures.js" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_3_AdvancedFeatures\js\marker.js" />
+    <BundleResource Include="Resources\ARchitectExamples\12_HardwareControl_3_AdvancedFeatures\js\myJsonData.js" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_1_2dTrackingAndGeo\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_1_2dTrackingAndGeo\assets\ShopAd.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_1_2dTrackingAndGeo\assets\ShopAdSmall.png" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_1_2dTrackingAndGeo\assets\YourShop_Deal.png" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_1_2dTrackingAndGeo\assets\YourShop_FindShops.png" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_1_2dTrackingAndGeo\assets\YourShop_GetADeal.png" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_1_2dTrackingAndGeo\assets\YourShop_Marker.png" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_1_2dTrackingAndGeo\assets\YourShop_OpenWebsite.png" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_1_2dTrackingAndGeo\assets\YourShop_color.png" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_1_2dTrackingAndGeo\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_1_2dTrackingAndGeo\js\2dtrackingandgeo.js" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_2_SolarSystem%28Geo%29\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_2_SolarSystem%28Geo%29\assets\Earth-icon.png" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_2_SolarSystem%28Geo%29\assets\Jupiter-icon.png" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_2_SolarSystem%28Geo%29\assets\Mars-icon.png" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_2_SolarSystem%28Geo%29\assets\Mercury-icon.png" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_2_SolarSystem%28Geo%29\assets\Neptune-icon.png" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_2_SolarSystem%28Geo%29\assets\Pluto-icon.png" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_2_SolarSystem%28Geo%29\assets\Saturn-icon.png" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_2_SolarSystem%28Geo%29\assets\Sun-icon.png" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_2_SolarSystem%28Geo%29\assets\Uranus-icon.png" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_2_SolarSystem%28Geo%29\assets\Venus-icon.png" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_2_SolarSystem%28Geo%29\assets\indi.png" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_2_SolarSystem%28Geo%29\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_2_SolarSystem%28Geo%29\js\solarsystemgeo.js" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_3_SolarSystem%282dTracking%29\index.html" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_3_SolarSystem%282dTracking%29\assets\SolarSystem.wtc" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_3_SolarSystem%282dTracking%29\assets\backdrop.png" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_3_SolarSystem%282dTracking%29\assets\earth.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_3_SolarSystem%282dTracking%29\assets\jupiter.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_3_SolarSystem%282dTracking%29\assets\mars.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_3_SolarSystem%282dTracking%29\assets\mercury.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_3_SolarSystem%282dTracking%29\assets\neptune.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_3_SolarSystem%282dTracking%29\assets\pluto.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_3_SolarSystem%282dTracking%29\assets\saturn.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_3_SolarSystem%282dTracking%29\assets\solarsystem.png" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_3_SolarSystem%282dTracking%29\assets\sun.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_3_SolarSystem%282dTracking%29\assets\uranus.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_3_SolarSystem%282dTracking%29\assets\venus.wt3" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_3_SolarSystem%282dTracking%29\css\default.css" />
+    <BundleResource Include="Resources\ARchitectExamples\x_Demo_3_SolarSystem%282dTracking%29\js\solarsystem2dtracking.js" />
+  </ItemGroup>
+  <Import Project="..\XamarinExampleApp\XamarinExampleApp.projitems" Label="Shared" Condition="Exists('..\XamarinExampleApp\XamarinExampleApp.projitems')" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

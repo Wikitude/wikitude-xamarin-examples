@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Xamarin Examples</string>
+    <string name="menu_main_launch_url">Custom URL Launcher</string>
+    <string name="menu_main_show_sdk_info">SDK Build Information</string>
+
+    <!-- Permission handling -->
+    <string name="permissions_denied">The Wikitude SDK needs the following permissions to enable an AR experience: </string>
+    <string name="permission_rationale_text">The Wikitude SDK needs the following permissions to enable an AR experience: </string>
+    <string name="permission_rationale_title">Wikitude Permissions</string>
+
+    <!-- SDK build information -->
+    <string name="build_information_title">Build information</string>
+    <string name="build_information_config">Build configuration: </string>
+    <string name="build_information_date">Build date: </string>
+    <string name="build_information_number">Build number: </string>
+    <string name="build_information_version">Build version: </string>
+
+    <!-- SamplePoiDetailActivity -->
+    <string name="poi_name">Name</string>
+    <string name="poi_description">Description</string>
+    <string name="poi_id">ID</string>
+
+    <!-- Url launcher storage -->
+    <string name="url_list_row_delete">deletes stored url</string>
+    <string name="url_list_row_edit">edits list row</string>
+    <string name="url_launcher_title">Custom Url Launcher</string>
+
+    <!-- Url launcher settings -->
+    <string name="url_launcher_settings_url_hint">http://</string>
+    <string name="url_launcher_settings_url_default">http://</string>
+    <string name="url_launcher_settings_url">URL</string>
+    <string name="url_launcher_settings_name">Name</string>
+    <string name="url_launcher_settings_geo">Geo</string>
+    <string name="url_launcher_settings_image_tracking">Image Tracking</string>
+    <string name="url_launcher_settings_instant_tracking">Instant Tracking</string>
+    <string name="url_launcher_settings_object_tracking">Object Tracking</string>
+    <string name="url_launcher_settings_camera_focus_mode">Camera Focus Mode</string>
+    <string name="url_launcher_settings_camera_position">Camera Position</string>
+    <string name="url_launcher_settings_camera_resolution">Camera Resolution</string>
+    <string name="url_launcher_settings_camera2_enabled">Camera 2 Enabled</string>
+    <string name="url_launcher_settings_ok">OK</string>
+
+    <string-array name="url_launcher_settings_camera_positions">
+        <item>Back</item>
+        <item>Front</item>
+    </string-array>
+
+    <string-array name="url_launcher_settings_focus_mode">
+        <item>Continuously</item>
+        <item>Once</item>
+        <item>Manual</item>
+    </string-array>
+
+    <string-array name="url_launcher_settings_camera_resolution">
+        <item>640x480</item>
+        <item>1280x720</item>
+        <item>1920x1080</item>
+        <item>AUTO</item>
+    </string-array>
+</resources>
