@@ -31,7 +31,11 @@ namespace XamarinExampleApp.iOS
 
             public string SelectedData()
             {
-                return data[selectedIndex];
+                if (selectedIndex >= 0) {
+                    return data[selectedIndex];
+                } else {
+                    return data[defaultIndex];
+                }
             }
 
             public void SelectData(string data)
@@ -170,7 +174,7 @@ namespace XamarinExampleApp.iOS
                         cameraSetting = CameraSettingForRow(indexPath.Row + 1);
                         if (cameraSetting != null)
                         {
-                            cell.DetailTextLabel.Text = cameraSetting.DefaultData();
+                            cell.DetailTextLabel.Text = cameraSetting.SelectedData();
                         }
                     }
 

@@ -24,22 +24,24 @@
 </head>
 
 <body>
-<div id="infoBox" class="info">
-    <div class="text">Scan:</div>
-    <div class="icons">
-        <img src='assets/austria.jpg'/>
-        <img src='assets/brazil.jpg'/>
-        <img src='assets/france.jpg'/>
-        <img src='assets/germany.jpg'/>
-        <img src='assets/italy.jpg'/>
+<div data-role="page" id="page1" style="background: none;">
+    <div id="infoBox" class="info">
+        <div class="text">Scan:</div>
+        <div class="icons">
+            <img src='assets/austria.jpg'/>
+            <img src='assets/brazil.jpg'/>
+            <img src='assets/france.jpg'/>
+            <img src='assets/germany.jpg'/>
+            <img src='assets/italy.jpg'/>
+        </div>
     </div>
-</div>
-<div id="loadingMessage" class="info">Loading ...</div>
+    <div id="loadingMessage" class="info">Loading ...</div>
 
-<div id="errorMessage"></div>
+    <div id="errorMessage"></div>
 
-<div id="scanButtonWrapper">
-    <a href="javascript: World.scan();" data-role="button" data-inline="true">Scan</a>
+    <div id="scanButtonWrapper">
+        <a href="javascript: World.scan();" data-role="button" data-inline="true">Scan</a>
+    </div>
 </div>
 <script src="js/singleimagerecognition.js"></script>
 </body>
