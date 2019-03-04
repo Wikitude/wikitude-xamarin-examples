@@ -3617,8 +3617,8 @@ namespace XamarinExampleApp.Droid
 			// aapt resource value: 0x7f0a0010
 			public const int abc_toolbar_collapse_description = 2131361808;
 			
-			// aapt resource value: 0x7f0a0027
-			public const int app_name = 2131361831;
+			// aapt resource value: 0x7f0a0030
+			public const int app_name = 2131361840;
 			
 			// aapt resource value: 0x7f0a001e
 			public const int appbar_scrolling_view_behavior = 2131361822;
@@ -3644,26 +3644,26 @@ namespace XamarinExampleApp.Droid
 			// aapt resource value: 0x7f0a0020
 			public const int character_counter_pattern = 2131361824;
 			
-			// aapt resource value: 0x7f0a002b
-			public const int compass_accuracy_low = 2131361835;
-			
-			// aapt resource value: 0x7f0a002e
-			public const int error_last_location = 2131361838;
-			
-			// aapt resource value: 0x7f0a0028
-			public const int error_loading_ar_experience = 2131361832;
-			
 			// aapt resource value: 0x7f0a002a
-			public const int error_loading_ar_experience_invalid_intent = 2131361834;
-			
-			// aapt resource value: 0x7f0a0029
-			public const int error_loading_ar_experience_unsupported = 2131361833;
+			public const int compass_accuracy_low = 2131361834;
 			
 			// aapt resource value: 0x7f0a002d
-			public const int error_parsing_json = 2131361837;
+			public const int error_last_location = 2131361837;
 			
-			// aapt resource value: 0x7f0a002f
-			public const int error_screen_capture = 2131361839;
+			// aapt resource value: 0x7f0a0027
+			public const int error_loading_ar_experience = 2131361831;
+			
+			// aapt resource value: 0x7f0a0029
+			public const int error_loading_ar_experience_invalid_intent = 2131361833;
+			
+			// aapt resource value: 0x7f0a0028
+			public const int error_loading_ar_experience_unsupported = 2131361832;
+			
+			// aapt resource value: 0x7f0a002c
+			public const int error_parsing_json = 2131361836;
+			
+			// aapt resource value: 0x7f0a002e
+			public const int error_screen_capture = 2131361838;
 			
 			// aapt resource value: 0x7f0a0031
 			public const int menu_main_launch_url = 2131361841;
@@ -3671,8 +3671,8 @@ namespace XamarinExampleApp.Droid
 			// aapt resource value: 0x7f0a0032
 			public const int menu_main_show_sdk_info = 2131361842;
 			
-			// aapt resource value: 0x7f0a002c
-			public const int no_location_provider = 2131361836;
+			// aapt resource value: 0x7f0a002b
+			public const int no_location_provider = 2131361835;
 			
 			// aapt resource value: 0x7f0a0021
 			public const int password_toggle_content_description = 2131361825;
@@ -3713,8 +3713,8 @@ namespace XamarinExampleApp.Droid
 			// aapt resource value: 0x7f0a0026
 			public const int status_bar_notification_info_overflow = 2131361830;
 			
-			// aapt resource value: 0x7f0a0030
-			public const int unexpected_error = 2131361840;
+			// aapt resource value: 0x7f0a002f
+			public const int unexpected_error = 2131361839;
 			
 			// aapt resource value: 0x7f0a004c
 			public const int url_launcher_settings_camera2_enabled = 2131361868;
