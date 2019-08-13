@@ -16,9 +16,21 @@ namespace XamarinExampleApp.iOS.AdvancedViewControllers
             // Perform any additional setup after loading the view, typically from a nib.
             architectView.ReceivedJSONObject += (object sender, ArchitectViewReceivedJSONObjectEventArgs e) => {
                 string action = e.JsonObject.ObjectForKey(new NSString("action")).ToString();
-                if ( action == "capture_screen" ) {
-                    NSDictionary userInfo = new NSDictionary();
-                    architectView.CaptureScreenWithMode(WTScreenshotCaptureMode._CamAndWebView, WTScreenshotSaveMode._PhotoLibrary, WTScreenshotSaveOptions.CallDelegateOnSuccess, userInfo);
+                switch ( action ) {
+                    case "capture_screen":
+                        NSDictionary userInfo = new NSDictionary();
+                        architectView.CaptureScreenWithMode(WTScreenshotCaptureMode._CamAndWebView, WTScreenshotSaveMode._PhotoLibrary, WTScreenshotSaveOptions.CallDelegateOnSuccess, userInfo);
+                        break;
+                    case "present_poi_details":
+                        UIStoryboard mainStoryboard = UIStoryboard.FromName("Main", NSBundle.MainBundle);
+                        PoiDetailViewController poiDetailViewController = (PoiDetailViewController)mainStoryboard.InstantiateViewController("poi_detail_view_controller");
+                        poiDetailViewController.SetPoiDetails(e.JsonObject);
+
+                        NavigationController.PushViewController(poiDetailViewController, true);
+                        break;
+
+                    default:
+                        break;
                 }
             };
 
