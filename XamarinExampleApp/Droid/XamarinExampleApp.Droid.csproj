@@ -97,7 +97,7 @@
       <HintPath>..\packages\Xamarin.Android.Support.Design.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Design.dll</HintPath>
     </Reference>
     <Reference Include="Wikitude.Android">
-      <HintPath>..\packages\Xamarin.Wikitude.SDK.JS.8.9.0\lib\monoandroid90\Wikitude.Android.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Wikitude.SDK.JS.8.9.1\lib\monoandroid90\Wikitude.Android.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Xamarin.Google.ARCore">
