@@ -121,6 +121,9 @@ namespace XamarinExampleApp.iOS
 
             applicationWillResignActiveObserver = NSNotificationCenter.DefaultCenter.AddObserver(UIApplication.WillResignActiveNotification, ApplicationWillResignActive);
             applicationDidBecomeActiveObserver = NSNotificationCenter.DefaultCenter.AddObserver(UIApplication.DidBecomeActiveNotification, ApplicationDidBecomeActive);
+
+            // Prevent device from sleeping
+            UIApplication.SharedApplication.IdleTimerDisabled = true;
         }
 
         public override void ViewWillDisappear(bool animated)
@@ -128,6 +131,9 @@ namespace XamarinExampleApp.iOS
             base.ViewWillDisappear(animated);
 
             NavigationController.InteractivePopGestureRecognizer.Delegate = null;
+
+            // Restore sleep ability to device
+            UIApplication.SharedApplication.IdleTimerDisabled = false;
         }
 
         public override void ViewDidDisappear(bool animated)

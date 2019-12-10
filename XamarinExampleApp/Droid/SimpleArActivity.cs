@@ -2,6 +2,7 @@
 using Android.App;
 using Android.OS;
 using Android.Webkit;
+using Android.Views;
 using Com.Wikitude.Architect;
 
 namespace XamarinExampleApp.Droid
@@ -101,6 +102,9 @@ namespace XamarinExampleApp.Droid
             architectView.OnCreate(config);  // Mandatory ArchitectView lifecycle call
 
             SetContentView(architectView); // Adds the architectView to the activity.
+
+            // Prevent device from sleeping
+            Window.AddFlags(flags: WindowManagerFlags.KeepScreenOn);
         }
 
         protected override void OnPostCreate(Bundle savedInstanceState)

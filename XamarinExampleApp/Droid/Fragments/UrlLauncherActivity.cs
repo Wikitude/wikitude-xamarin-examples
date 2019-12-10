@@ -1,6 +1,7 @@
 ﻿
 using Android.App;
 using Android.OS;
+using Android.Views;
 using Android.Support.V7.App;
 
 namespace XamarinExampleApp.Droid.Fragments
@@ -26,6 +27,9 @@ namespace XamarinExampleApp.Droid.Fragments
             var fragmentTransaction = SupportFragmentManager.BeginTransaction();
             fragmentTransaction.Replace(Resource.Id.mainFragement, fragment);
             fragmentTransaction.Commit();
+
+            // Prevent device from sleeping
+            Window.AddFlags(flags: WindowManagerFlags.KeepScreenOn);
         }
     }
 }
