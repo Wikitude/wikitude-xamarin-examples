@@ -14,10 +14,19 @@ namespace XamarinExampleApp.iOS.CoreServices
         {
             WTFeatures iOSFeatures = 0;
             if ( (featuresMask & Features.Geo) == Features.Geo ) {
-                iOSFeatures |= WTFeatures.Geo;
+                iOSFeatures |= WTFeatures.WTFeature_Geo;
             }
             if ( (featuresMask & Features.ImageTracking) == Features.ImageTracking ) {
                 iOSFeatures |= WTFeatures.WTFeature_ImageTracking;
+            }
+            if ((featuresMask & Features.InstantTracking) == Features.InstantTracking) {
+                iOSFeatures |= WTFeatures.WTFeature_InstantTracking;
+            }
+            if ((featuresMask & Features.ObjectTracking) == Features.ObjectTracking) {
+                iOSFeatures |= WTFeatures.WTFeature_ObjectTracking;
+            }
+            if ((featuresMask & Features.PhotoLibraryScreenshotImport) == Features.PhotoLibraryScreenshotImport) {
+                iOSFeatures |= WTFeatures.WTFeature_PhotoLibraryScreenshotImport;
             }
 
             return iOSFeatures;

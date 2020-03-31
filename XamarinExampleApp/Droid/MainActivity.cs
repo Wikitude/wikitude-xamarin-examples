@@ -20,7 +20,7 @@ namespace XamarinExampleApp.Droid
     * The MainActivity is used to display the list of all ArExperiences and handles the runtime
     * permissions for them.
     */
-    [Activity(Label = "Xamarin Example App", MainLauncher = true, Icon = "@mipmap/ic_launcher")]
+    [Activity(Label = "Xamarin Example App", MainLauncher = true, Icon = "@mipmap/ic_launcher", RoundIcon = "@mipmap/ic_launcher_round")]
     public class MainActivity : AppCompatActivity, IPermissionManagerPermissionManagerCallback
     {
         private ExpandableListView listView;

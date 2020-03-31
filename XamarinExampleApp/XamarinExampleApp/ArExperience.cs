@@ -54,10 +54,11 @@ namespace XamarinExampleApp
     [Flags, Serializable]
     public enum Features 
     {
-        Geo = 1,
-        ImageTracking = 2,
-        InstantTracking = 4,
-        ObjectTracking = 8
+        ImageTracking = 0,
+        InstantTracking = 2,
+        ObjectTracking = 3,
+        Geo = 6,
+        PhotoLibraryScreenshotImport = 7
     }
 
     [Serializable]
