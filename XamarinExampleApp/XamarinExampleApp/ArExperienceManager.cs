@@ -79,17 +79,17 @@ namespace XamarinExampleApp
             {
                 switch ((string)feature)
                 {
-                    case "geo":
-                        features |= Features.Geo;
-                        break;
                     case "image_tracking":
                         features |= Features.ImageTracking;
+                        break;
+                    case "object_tracking":
+                        features |= Features.ObjectTracking;
                         break;
                     case "instant_tracking":
                         features |= Features.InstantTracking;
                         break;
-                    case "object_tracking":
-                        features |= Features.ObjectTracking;
+                    case "geo":
+                        features |= Features.Geo;
                         break;
                 }
             }
