@@ -86,7 +86,7 @@
     <Reference Include="Xamarin.iOS" />
     <Reference Include="System.Json" />
     <Reference Include="Xamarin.Wikitude.SDK.JS.iOS">
-      <HintPath>..\packages\Xamarin.Wikitude.SDK.JS.9.2.0\lib\xamarinios10\Xamarin.Wikitude.SDK.JS.iOS.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Wikitude.SDK.JS.9.3.0\lib\xamarinios10\Xamarin.Wikitude.SDK.JS.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -296,15 +296,6 @@
     <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\assets\germany.jpg" />
     <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\assets\italy.jpg" />
     <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\css\default.css" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\jquery\jquery-1.9.1.min.js" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\jquery\jquery-mobile-transparent-ui-overlay.css" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\jquery\jquery.mobile-1.3.2.min.css" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\jquery\jquery.mobile-1.3.2.min.js" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\jquery\images\ajax-loader.gif" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\jquery\images\icons-18-black.png" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\jquery\images\icons-18-white.png" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\jquery\images\icons-36-black.png" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\jquery\images\icons-36-white.png" />
     <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_1_SingleImageRecognition\js\singleimagerecognition.js" />
     <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\index.html" />
     <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\assets\austria.jpg" />
@@ -314,15 +305,6 @@
     <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\assets\germany.jpg" />
     <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\assets\italy.jpg" />
     <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\css\default.css" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\jquery-1.9.1.min.js" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\jquery-mobile-transparent-ui-overlay.css" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\jquery.mobile-1.3.2.min.css" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\jquery.mobile-1.3.2.min.js" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\images\ajax-loader.gif" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\images\icons-18-black.png" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\images\icons-18-white.png" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\images\icons-36-black.png" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\images\icons-36-white.png" />
     <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_2_ContinuousImageRecognition\js\continuousimagerecognition.js" />
     <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\index.html" />
     <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\assets\austria.jpg" />
@@ -333,15 +315,6 @@
     <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\assets\italy.jpg" />
     <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\assets\orderNowButton.png" />
     <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\css\default.css" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\jquery-1.9.1.min.js" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\jquery-mobile-transparent-ui-overlay.css" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\jquery.mobile-1.3.2.min.css" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\jquery.mobile-1.3.2.min.js" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\images\ajax-loader.gif" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\images\icons-18-black.png" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\images\icons-18-white.png" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\images\icons-36-black.png" />
-    <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\images\icons-36-white.png" />
     <BundleResource Include="Resources\ARchitectExamples\04_CloudRecognition_3_UsingMetainformationInTheResponse\js\usingmetainformationintheresponse.js" />
     <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_1_SimpleInstantTracking\index.html" />
     <BundleResource Include="Resources\ARchitectExamples\05_InstantTracking_1_SimpleInstantTracking\assets\crosshairs_blue.png" />

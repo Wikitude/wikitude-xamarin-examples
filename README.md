@@ -3,12 +3,12 @@
 by Wikitude GmbH - [www.wikitude.com](https://www.wikitude.com)
 
 The first Xamarin component enabling to put augmented reality into an Xamarin based application
-The provided sample projects for Android and iOS demo the most common usecases. 
-Details about functionality and features of the most current version can be found on [our website](https://www.wikitude.com/products/extensions/cordova-plugin-augmented-reality/)
+The provided sample projects for Android and iOS demo the most common use cases. 
+Details about functionality and features of the most current version can be found on [our website](https://www.wikitude.com/products/wikitude-sdk/)
 
 # Documentation & Samples
 - Please find details about plugin installation, samples and the full documentation in our [Wikitude Developer Documentation](https://www.wikitude.com/external/doc/documentation/latest/xamarin/).
-- Please install the Wikitude Component from [nuget](https://www.nuget.org/packages/Xamarin.Wikitude.SDK.JS/8.1.0)
+- Please install the Wikitude Component from [nuget](https://www.nuget.org/packages/Xamarin.Wikitude.SDK.JS/)
 
 
 The Wikitude Component and the sample application is under Apache 2.0 license (see below), where the Wikitude SDK library (pre-bundled) itself follows a proprietary license scheme (see [LICENSE.MD](LICENSE.MD) for details).

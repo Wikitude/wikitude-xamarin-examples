@@ -97,7 +97,7 @@
       <HintPath>..\packages\Xamarin.Android.Support.Design.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Design.dll</HintPath>
     </Reference>
     <Reference Include="Wikitude.Android">
-      <HintPath>..\packages\Xamarin.Wikitude.SDK.JS.9.2.0\lib\monoandroid90\Wikitude.Android.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Wikitude.SDK.JS.9.3.0\lib\monoandroid90\Wikitude.Android.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Xamarin.Google.ARCore">
@@ -308,15 +308,6 @@
     <AndroidAsset Include="Assets\samples\04_CloudRecognition_1_SingleImageRecognition\assets\germany.jpg" />
     <AndroidAsset Include="Assets\samples\04_CloudRecognition_1_SingleImageRecognition\assets\italy.jpg" />
     <AndroidAsset Include="Assets\samples\04_CloudRecognition_1_SingleImageRecognition\css\default.css" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_1_SingleImageRecognition\jquery\jquery-1.9.1.min.js" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_1_SingleImageRecognition\jquery\jquery-mobile-transparent-ui-overlay.css" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_1_SingleImageRecognition\jquery\jquery.mobile-1.3.2.min.css" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_1_SingleImageRecognition\jquery\jquery.mobile-1.3.2.min.js" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_1_SingleImageRecognition\jquery\images\ajax-loader.gif" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_1_SingleImageRecognition\jquery\images\icons-18-black.png" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_1_SingleImageRecognition\jquery\images\icons-18-white.png" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_1_SingleImageRecognition\jquery\images\icons-36-black.png" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_1_SingleImageRecognition\jquery\images\icons-36-white.png" />
     <AndroidAsset Include="Assets\samples\04_CloudRecognition_1_SingleImageRecognition\js\singleimagerecognition.js" />
     <AndroidAsset Include="Assets\samples\04_CloudRecognition_2_ContinuousImageRecognition\index.html" />
     <AndroidAsset Include="Assets\samples\04_CloudRecognition_2_ContinuousImageRecognition\assets\austria.jpg" />
@@ -326,15 +317,6 @@
     <AndroidAsset Include="Assets\samples\04_CloudRecognition_2_ContinuousImageRecognition\assets\germany.jpg" />
     <AndroidAsset Include="Assets\samples\04_CloudRecognition_2_ContinuousImageRecognition\assets\italy.jpg" />
     <AndroidAsset Include="Assets\samples\04_CloudRecognition_2_ContinuousImageRecognition\css\default.css" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\jquery-1.9.1.min.js" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\jquery-mobile-transparent-ui-overlay.css" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\jquery.mobile-1.3.2.min.css" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\jquery.mobile-1.3.2.min.js" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\images\ajax-loader.gif" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\images\icons-18-black.png" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\images\icons-18-white.png" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\images\icons-36-black.png" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_2_ContinuousImageRecognition\jquery\images\icons-36-white.png" />
     <AndroidAsset Include="Assets\samples\04_CloudRecognition_2_ContinuousImageRecognition\js\continuousimagerecognition.js" />
     <AndroidAsset Include="Assets\samples\04_CloudRecognition_3_UsingMetainformationInTheResponse\index.html" />
     <AndroidAsset Include="Assets\samples\04_CloudRecognition_3_UsingMetainformationInTheResponse\assets\austria.jpg" />
@@ -345,15 +327,6 @@
     <AndroidAsset Include="Assets\samples\04_CloudRecognition_3_UsingMetainformationInTheResponse\assets\italy.jpg" />
     <AndroidAsset Include="Assets\samples\04_CloudRecognition_3_UsingMetainformationInTheResponse\assets\orderNowButton.png" />
     <AndroidAsset Include="Assets\samples\04_CloudRecognition_3_UsingMetainformationInTheResponse\css\default.css" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\jquery-1.9.1.min.js" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\jquery-mobile-transparent-ui-overlay.css" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\jquery.mobile-1.3.2.min.css" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\jquery.mobile-1.3.2.min.js" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\images\ajax-loader.gif" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\images\icons-18-black.png" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\images\icons-18-white.png" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\images\icons-36-black.png" />
-    <AndroidAsset Include="Assets\samples\04_CloudRecognition_3_UsingMetainformationInTheResponse\jquery\images\icons-36-white.png" />
     <AndroidAsset Include="Assets\samples\04_CloudRecognition_3_UsingMetainformationInTheResponse\js\usingmetainformationintheresponse.js" />
     <AndroidAsset Include="Assets\samples\05_InstantTracking_1_SimpleInstantTracking\index.html" />
     <AndroidAsset Include="Assets\samples\05_InstantTracking_1_SimpleInstantTracking\assets\crosshairs_blue.png" />
