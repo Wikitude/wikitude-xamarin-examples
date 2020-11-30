@@ -9,6 +9,9 @@ namespace XamarinExampleApp.Droid.Fragments
     [Activity(Label = "UrlLauncherActivity")]
     public class UrlLauncherActivity : AppCompatActivity
     {
+
+        private Android.Support.V4.App.Fragment fragment;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -18,7 +21,7 @@ namespace XamarinExampleApp.Droid.Fragments
             var experienceBytes = Intent.GetByteArrayExtra(SimpleArFragment.IntentExtrasKeyExperienceData);
             var experience = ArExperience.Deserialize(experienceBytes);
 
-            Android.Support.V4.App.Fragment fragment = (experience.FeaturesMask & Features.Geo) == Features.Geo ? new SimpleGeoFragment() : new SimpleArFragment();
+            fragment = (experience.FeaturesMask & Features.Geo) == Features.Geo ? new SimpleGeoFragment() : new SimpleArFragment();
 
             var args = new Bundle();
             args.PutByteArray(SimpleArFragment.IntentExtrasKeyExperienceData, experienceBytes);
@@ -30,6 +33,13 @@ namespace XamarinExampleApp.Droid.Fragments
 
             // Prevent device from sleeping
             Window.AddFlags(flags: WindowManagerFlags.KeepScreenOn);
+        }
+
+        public override void OnBackPressed()
+        {
+            if (!(fragment as SimpleArFragment).CanFragmentGoBack()) {
+                base.OnBackPressed();
+            }
         }
     }
 }

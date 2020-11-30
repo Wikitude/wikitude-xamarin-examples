@@ -62,5 +62,10 @@ namespace XamarinExampleApp.Droid.Fragments
             architectView.ClearCache();
             architectView.OnDestroy();
         }
+
+        public bool CanFragmentGoBack()
+        {
+            return architectView.WebViewGoBack();
+        }
     }
 }
