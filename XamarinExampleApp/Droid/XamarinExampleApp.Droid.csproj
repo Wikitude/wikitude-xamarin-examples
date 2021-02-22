@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>XamarinExampleApp.Droid</RootNamespace>
     <AssemblyName>XamarinExampleApp.Droid</AssemblyName>
-    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -97,7 +97,7 @@
       <HintPath>..\packages\Xamarin.Android.Support.Design.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Design.dll</HintPath>
     </Reference>
     <Reference Include="Wikitude.Android">
-      <HintPath>..\packages\Xamarin.Wikitude.SDK.JS.9.5.0\lib\monoandroid90\Wikitude.Android.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Wikitude.SDK.JS.9.6.0\lib\monoandroid90\Wikitude.Android.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Xamarin.Google.ARCore">
@@ -177,14 +177,7 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Util\" />
-    <Folder Include="Util\Adapters\" />
-    <Folder Include="Util\Location\" />
-    <Folder Include="Advanced\" />
-    <Folder Include="Fragments\" />
-    <Folder Include="Util\Urllauncher\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <AndroidAsset Include="Assets\samples\ade.js" />
     <AndroidAsset Include="Assets\samples\samples.json" />
@@ -412,7 +405,7 @@
     <AndroidAsset Include="Assets\samples\06_ObjectTracking_1_BasicObjectTracking\assets\traffic_cone.wt3" />
     <AndroidAsset Include="Assets\samples\06_ObjectTracking_1_BasicObjectTracking\css\default.css" />
     <AndroidAsset Include="Assets\samples\06_ObjectTracking_1_BasicObjectTracking\js\simpleobjecttracking.js" />
-    <AndroidAsset Include="Assets\samples\06_ObjectTracking_2_2dImageAndSoundAugmentations\index.html" />    
+    <AndroidAsset Include="Assets\samples\06_ObjectTracking_2_2dImageAndSoundAugmentations\index.html" />
     <AndroidAsset Include="Assets\samples\06_ObjectTracking_2_2dImageAndSoundAugmentations\assets\emergency_light.png" />
     <AndroidAsset Include="Assets\samples\06_ObjectTracking_2_2dImageAndSoundAugmentations\assets\firetruck.wto" />
     <AndroidAsset Include="Assets\samples\06_ObjectTracking_2_2dImageAndSoundAugmentations\assets\firetruck_image.png" />

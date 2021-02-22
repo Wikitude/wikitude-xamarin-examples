@@ -16,7 +16,7 @@ The Wikitude Component and the sample application is under Apache 2.0 license (s
 # LICENSE
 
 ``` 
-   Copyright 2012-2020 Wikitude GmbH, https://www.wikitude.com
+   Copyright 2012-2021 Wikitude GmbH, https://www.wikitude.com
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.

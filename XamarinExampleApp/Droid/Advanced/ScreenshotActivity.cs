@@ -74,8 +74,14 @@ namespace XamarinExampleApp.Droid.Advanced
             }
             else
             {
-                this.screenCapture = screenCapture;
-                ArchitectView.PermissionManager.CheckPermissions(this, new string[] { Manifest.Permission.WriteExternalStorage }, 123, this);
+                if (Build.VERSION.SdkInt >= BuildVersionCodes.Q)
+                {
+                    ScreenCapture.SaveScreenCaptureToExternalStorage(this, screenCapture);
+                } else
+                {
+                    this.screenCapture = screenCapture;
+                    ArchitectView.PermissionManager.CheckPermissions(this, new string[] { Manifest.Permission.WriteExternalStorage }, 123, this);
+                }
             }
         }
 

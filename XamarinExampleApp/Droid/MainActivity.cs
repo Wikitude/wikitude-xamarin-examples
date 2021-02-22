@@ -9,10 +9,13 @@ using Android.Content;
 using Android.Util;
 using Android.Views;
 using Android;
+using Com.Wikitude.Common;
+using Com.Wikitude.Common.Devicesupport;
 using Com.Wikitude.Common.Permission;
 using XamarinExampleApp.Droid.Advanced;
 using System;
 using XamarinExampleApp.Droid.Util.Urllauncher;
+using Java.Util;
 
 namespace XamarinExampleApp.Droid
 {
@@ -172,15 +175,35 @@ namespace XamarinExampleApp.Droid
         }
 
         private static int FilterUnsupportedArExperiences(Context context, List<ArExperienceGroup> experienceGroups) {
-            Features supportedFeaturesForDevice = (Features)ArchitectView.GetSupportedFeaturesForDevice(context);
-
             int removedExperiences = 0;
-            foreach (var group in experienceGroups)
-            {
-                removedExperiences += group.ArExperiences.RemoveAll(experience => (experience.FeaturesMask & supportedFeaturesForDevice) != experience.FeaturesMask);
+            foreach (var group in experienceGroups) {
+                removedExperiences += group.ArExperiences.RemoveAll(experience => !ArchitectView.IsDeviceSupporting(context, GetEnumSetFeatures(experience.FeaturesMask)).IsSuccess);
             }
             experienceGroups.RemoveAll(group => group.ArExperiences.Count == 0);
             return removedExperiences;
+        }
+
+        private static EnumSet GetEnumSetFeatures(Features features)
+        {
+            EnumSet featuresSet = EnumSet.Of(Feature.ImageTracking);
+            if ((features & Features.ImageTracking) != Features.ImageTracking)
+            {
+                featuresSet.Remove(Feature.ImageTracking);
+            }
+            if ((features & Features.ObjectTracking) == Features.ObjectTracking)
+            {
+                featuresSet.Add(Feature.ObjectTracking);
+            }
+            if ((features & Features.InstantTracking) == Features.InstantTracking)
+            {
+                featuresSet.Add(Feature.InstantTracking);
+            }
+            if ((features & Features.Geo) == Features.Geo)
+            {
+                featuresSet.Add(Feature.Geo);
+            }
+
+            return featuresSet;
         }
 
         private Type GetActivityForExperience(ArExperience experience)

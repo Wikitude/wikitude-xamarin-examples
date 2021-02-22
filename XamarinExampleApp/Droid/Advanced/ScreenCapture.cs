@@ -24,6 +24,10 @@ namespace XamarinExampleApp.Droid.Advanced
             var resolver = activity.ContentResolver;
             var values = new ContentValues();
             values.Put(MediaStore.MediaColumns.MimeType, "image/jpeg");
+            if (Build.VERSION.SdkInt >= BuildVersionCodes.Q)
+            {
+                values.Put(MediaStore.MediaColumns.RelativePath, Android.OS.Environment.DirectoryPictures);
+            }
 
             var uri = resolver.Insert(MediaStore.Images.Media.ExternalContentUri, values);
         
@@ -37,7 +41,6 @@ namespace XamarinExampleApp.Droid.Advanced
             share.SetType("image/jpg");
             share.AddFlags(ActivityFlags.GrantReadUriPermission);
             share.PutExtra(Intent.ExtraStream, uri);
-
 
             // 3. launch intent-chooser
             string chooserTitle = "Share Snaphot";
